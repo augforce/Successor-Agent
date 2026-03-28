@@ -17,7 +17,7 @@ To ensure the agent remains helpful even when internal documentation is incomple
 ## 3. Safety Guardrails & Compliance Disclaimers
 A critical component of this project is the **"Trust but Verify"** safety layer. Since web search results are not company-vetted, specific prompt engineering was applied to manage risk.
 * **Trigger:** Whenever the agent utilizes external web data to formulate an answer.
-* **Required Output:** The agent is mandated to include a specific disclaimer: *"The is no documentation available for this particular situation. However, I am able to search the web for general instructions. Please verify these steps for accuracy and check with your supervisor to ensure this procedure is acceptable per company policy."*
+* **Required Output:** The agent is mandated to indicate that if there is no documentation available for a particular situation they are able to search the web for general instructions as well as indicate that they will need to verify these steps for accuracy and check with their supervisor to ensure this procedure is acceptable per company policy.
 * **Result:** Pass. This guardrail ensures that the SuccessorBot assists the user without inadvertently encouraging unapproved or non-compliant technical actions.
 
 ## 4. Performance & Reliability Metrics
