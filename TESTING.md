@@ -1,6 +1,6 @@
 # Validation & Testing Report: SuccessorAgent (Hybrid RAG)
 
-This document outlines the testing methodology used to ensure the reliability, accuracy, and safety of the SuccessorAgent. This agent utilizes a multi-tier retrieval strategy: prioritizing internal Knowledge Bases (KBs) and falling back to Web Search for general technical guidance.
+This document outlines the testing methodology used to ensure the reliability, accuracy, and safety of the SuccessorAgent. This agent utilizes a multi-tier retrieval strategy: prioritizing internal Knowledge Bases (KBs) and falling back to Web Search for general technical guidance. 
 
 ## 1. Internal Grounding Accuracy (Priority Tier)
 To preserve institutional knowledge, the agent is programmed to prioritize internal documentation over general internet data.
@@ -17,7 +17,7 @@ To ensure the agent remains helpful even when internal documentation is incomple
 ## 3. Safety Guardrails & Compliance Disclaimers
 A critical component of this project is the **"Trust but Verify"** safety layer. Since web search results are not company-vetted, specific prompt engineering was applied to manage risk.
 * **Trigger:** Whenever the agent utilizes external web data to formulate an answer.
-* **Required Output:** The agent is mandated to indicate that if there is no documentation available for a particular situation they are able to search the web for general instructions as well as indicate that they will need to verify these steps for accuracy and check with their supervisor to ensure this procedure is acceptable per company policy.
+* **Required Output:** The agent is mandated to indicate that if there is no documentation available for a particular situation they are able to search the web for general instructions as well as indicate that they will need to verify these steps for accuracy and check with their supervisor, or cross-reference the uploaded company policy documentation, to ensure this procedure is acceptable per company policy.
 * **Result:** Pass. This guardrail ensures that the SuccessorAgent assists the user without inadvertently encouraging unapproved or non-compliant technical actions.
 
 ## 4. Performance & Reliability Metrics
