@@ -1,10 +1,10 @@
 ```mermaid
 graph TD
     subgraph User_Layer [User Interaction]
-        A[User Query] --> B[Azure AI Foundry Interface]
+        A[User Query] --> B[Microsoft Foundry]
     end
 
-    subgraph Orchestration_Layer [Azure AI Foundry / Agent Logic]
+    subgraph Orchestration_Layer [Microsoft Foundry / Agent Logic]
         B --> C{Search Orchestrator}
         C --> D[System Prompt & Safety Logic]
     end
@@ -16,7 +16,7 @@ graph TD
     end
 
     subgraph Reasoning_Layer [LLM Processing]
-        D --> H[GPT-4o Model]
+        D --> H[GPT-4.1-mini]
         H --> I[Response Generation]
     end
 
