@@ -4,8 +4,11 @@ This document outlines the testing methodology used to ensure the reliability, a
 
 ## 1. Internal Grounding Accuracy (KB Tier)
 To preserve institutional knowledge, the agent is programmed to prioritize internal documentation over general internet data.
-* **Test Case:** Queries regarding specific company-defined IT policies (e.g., Authenticate to our MDM).
+* **Test Case:** "I need to help a user wipe their MacBook per company instructions"
 * **Expected Result:** The agent must pull data directly from the uploaded document sources and provide a citation.
+* **Verfication**
+  * -Intent resolution | Pass: The assistant's response provides a detailed, step-by-step process for wiping a MacBook, which directly addresses the user's request for help in accordance with company instructions. It cites the specific document from which the information is derived, aligning with the operating rules outlined in the system's context. The response is structured clearly, using bullet points for clarity, and ends with a follow-up question to ensure understanding. This comprehensive approach fully resolves the user's query.
+  * -Task adherence | Pass: The assistant successfully provided a detailed step-by-step process for wiping a MacBook, adhering to the user's request and referencing the internal SOP document. It included specific instructions and a follow-up question to ensure understanding, which indicates completeness and clarity. There were no indications of safety or privacy violations, and the assistant did not skip any necessary steps in the process. The response was structured appropriately, using bullet points for clarity. Overall, the assistant's actions aligned with the user's intent and the constraints set forth in the system message, resulting in a pass for all evaluation dimensions.
 * **Observation:** In 100% of internal-specific tests, the agent correctly identified the local source, ensuring the "Successor" receives company-approved instructions first.
 
 ## 2. Hybrid Retrieval & Fallback (Web Search Tier)
