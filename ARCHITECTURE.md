@@ -30,3 +30,5 @@ graph TD
     style F fill:#f2f2f2,stroke:#333
     style G fill:#fff,stroke-dasharray: 5 5
 ```
+## *SECURITY NOTE*
+All data retrieval happens within the encrypted Azure Tenant boundary using Managed Identities to ensure Zero-Trust security."
