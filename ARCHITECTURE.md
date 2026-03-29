@@ -12,7 +12,7 @@ graph TD
     subgraph Data_Layer [Knowledge Retrieval]
         C --> E[Azure AI Search Index]
         E --- F[(Internal IT Knowledge Base)]
-        C -.-> G[Azure AI Web Search Tool]
+        C -.-> G[Web Search - Grounding with Bing]
     end
 
     subgraph Reasoning_Layer [LLM Processing]
