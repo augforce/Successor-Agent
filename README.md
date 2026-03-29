@@ -16,7 +16,7 @@ An intelligent RAG-based agent built on Microsoft Foundry designed to automate I
 ## 🛠️ Technical Implementation
 - **LLM:** GPT-4.1-mini
 - **RAG Architecture:** Integrated Azure AI Search with a manual Vector Store for document retrieval.
-- **Prompt Engineering:** Designed a system persona to act as a mentor, citing specific KB documentation for every answer. If there is no documentation available for the support question, the agent will search the web for applicable steps/procedures, making sure to remind the requestor that they need to verify the instructions for accuracy and get clearance from their supervisor before implimenting.
+- **Prompt Engineering:** Designed a system persona to act as a mentor, citing specific KB documentation for every answer. If there is no documentation available for the support question, the agent will search the web for applicable steps/procedures, making sure to remind the requestor that they need to verify the instructions for accuracy and to cross-reference the web instructions with the company policy documenation to ensure best practices.
 
 ## **Security and Identity:** 
 To ensure the "SuccessorAgent" meets corporate security standards, the architecture follows the Principle of Least Privilege (PoLP):
